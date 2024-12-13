@@ -1,38 +1,26 @@
 # Teach2Give Feb/Apr Technical Test
 
-## Task 1: Algorithmic Thinking & Data Structures - Unique Character Count
+## Task 1: Algorithmic Thinking & Data Structures
 
-Task implementation: [characterCounter.js.](./task1-algorithmic-thinking/characterCount.js)
+Task implementation: [capitalize.js.](./task1-algorithmic-thinking/capitalize.js)
 
-### 1. How the algorithm scales with input size (Big-O Notation)
+### How the algorithm scales with input size (Big-O Notation)
+- Time Complexity: O(n), where n is the total number of characters in the input string. The algorithm makes a single pass to split the string, another to map and transform words, and a final pass to join them.
 
-1. #### Time Complexity
-    a. The for loop iterates over each character in the string `word`, and since each operation in the loop (checking and updating the existence/value of a character in the charCounts object) takes constant time, then the total time for the loop is **O(n)** where n is the length of the string `word`.
+- Space Complexity: O(n), as it creates new arrays and strings during the transformation process. For very large inputs, this could be memory-intensive. A potential optimization for extremely large strings would be to use an in-place transformation with a character array, which could reduce space complexity to O(1) if implemented carefully. However, for most practical use cases, the current implementation provides a clean, readable, and efficient solution that balances performance with code clarity.
 
-    b. Accessing and updating properties in the object `charCounts` takes constant time, so the total time for the loop is **O(n)** where n is the length of the string `word`.
+- The `map()` approach is particularly elegant as it handles the capitalization in a functional and concise manner, making the code easy to understand and maintain.
 
-    Total time complexity: **O(n)**
+---
 
-2. #### Space Complexity:
-    If the the characters in the input string are all unique, then the `charCounts` object will  have at most **n** keys, where **n** is the number of characters in the input string. 
-    
-    Space complexity: **O(n)**.
+## Task 2: : Frontend Development Challenge: Simple FAQ Accordion
 
-### 2. Ways to optimize the algorithm further
-1. #### Case insensitivity
-    `word = word.toLowerCase();` is used at the beginning of the function to make the function case-insensitive.
+- Task implementation: [index.html](./task2-faq-accordion/index.html)
+- Live preview: 
+### Screenshots:
 
-    This avoids having seperate counts for uppercase and lowercase versions of the same character.
+#### Desktop/Landscape View:
+![desktop view](./images/desktop.png)
 
-2. #### Using the nullish coalescing operator (??)
-    The nullish coalescing operator (??) can be used instead of an `if-else` to check and update the count. This would reduce look-up times and avoid double-checking.
-
-    ```javascript
-    charCounts[char] = (charCounts[char] ?? 0) + 1;
-    ```
-3. #### Handling empty strings
-    The function can be modified to return an empty object if the input string is empty.
-
-    ```javascript
-    if (!word) return {};
-    ```
+#### Mobile/Potratit View
+![mobile view](./images/mobile.png)
