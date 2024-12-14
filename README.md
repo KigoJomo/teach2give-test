@@ -16,7 +16,7 @@ Task implementation: [capitalize.js.](./task1-algorithmic-thinking/capitalize.js
 ## Task 2: : Frontend Development Challenge: Simple FAQ Accordion
 
 - Task implementation: [index.html](./task2-faq-accordion/index.html)
-- Live preview: 
+- Live preview: [https://faq-accordion-preview.vercel.app/](https://faq-accordion-preview.vercel.app/)
 ### Screenshots:
 
 #### Desktop/Landscape View:
